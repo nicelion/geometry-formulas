@@ -2,8 +2,8 @@
 /**
  * Write a description of class Geometry here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Ian Thompson
+ * @version 0.0.1
  */
 public class Geometry 
 {
