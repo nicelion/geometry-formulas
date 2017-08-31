@@ -89,6 +89,36 @@ public class Geometry
         double area = 2.0 *((w * length) + (h * length) + (h * w));
         return area;
     }
+    
+    public static double sphereSurfaceArea(double r)
+    {
+        double area = 4 * Math.PI * (Math.pow(r, 2));
+        return area;
+    }
+    public static double hypotenuseOfRightTriangle(double a, double b)
+    {
+        double c =  Math.sqrt((Math.pow(a, 2) + (Math.pow(b, 2))));
+        return c;
+    }
+    
+    public static double distancePoints(double x1, double x2, double y1, double y2)
+    {
+        double d = Math.sqrt((Math.pow((x2 - x1), 2.0) + Math.pow((y2 - y1), 2.0)));
+        return d;
+    }
+    
+    public static double slope(double x1, double y1, double x2, double y2) 
+    {
+        double slope = (y2 - y1) / (x2 - x1);
+        return slope;
+    }
+    
+    public static double triangleArea(double a, double b, double c)
+    {
+        double s = (a + b + c) / 2.0;
+        double area = Math.sqrt(s * (s - a) * (s - b) * (s - c));
+        return area;
+    }
     public static void main(String[] args) 
     {
         /*double ta1 = triangleArea(4.2, 8.1);
@@ -107,5 +137,11 @@ public class Geometry
         System.out.println("Rect. Prism Volume: " + rectangularPrismVolume(3, 4, 8));
         System.out.println("Cone Volume: " + coneVolume(5, 20));
         System.out.println("Rect. Prism SA: " + rectPrismSurfaceArea(5, 20, 4));
+        System.out.println("Sphere SA: " + sphereSurfaceArea(10));
+        System.out.println("Hypotenuse: " + hypotenuseOfRightTriangle(4, 9));
+        System.out.println("Distance: " + distancePoints(-3, 0, 2, -3));
+        System.out.println("Slope: " + slope(.5, .3, 5, 0)); 
+        System.out.println("Area of Triangle: " + triangleArea(25, 21, 12));
+        
     }
 }
